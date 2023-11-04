@@ -1,0 +1,37 @@
+SSetting Up and Running GPT Engineer in PyCharm on Windows:
+
+1. Project Environment:
+In PyCharm, ensure you have a virtual environment set up for the project. This is usually created by default when you initiate a new project in PyCharm.
+
+2. Installing the Package:
+Since you've already cloned the repository and are inside the project in PyCharm, open the terminal within PyCharm.
+Install the project dependencies using the following command:
+markdown
+Copy code
+python -m pip install -e .
+
+3. Setting Up the API Key:
+In the PyCharm terminal, you can set the environment variable using:
+markdown
+Copy code
+set OPENAI_API_KEY=your_api_key
+Alternatively, in the project directory, you'll find a file named .env.template. Create a copy of this and rename it to .env. Open it and add your OPENAI_API_KEY value there.
+
+4. Running GPT Engineer:
+Create a new project folder. In the PyCharm terminal, you can copy the example project with:
+markdown
+Copy code
+xcopy projects\example projects\my-new-project /E
+Inside the projects\my-new-project directory, you'll find a file named prompt. Open this file in PyCharm and fill in the desired prompt.
+Once you've set your prompt, run GPT Engineer by executing the following in the PyCharm terminal:
+markdown
+Copy code
+gpt-engineer projects\my-new-project
+
+5. Reviewing Results:
+After execution, navigate to the projects\my-new-project\workspace directory within PyCharm's project explorer. Here, you'll find the generated files.
+6. Additional Commands:
+If you need more configurations or command options, you can view them by running:
+markdown
+Copy code
+gpt-engineer --help
